@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,900');
-@import url('https://fonts.googleapis.com/css?family=Anton');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,400,900");
+@import url("https://fonts.googleapis.com/css?family=Anton");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
 * {
   box-sizing: border-box;
@@ -35,11 +35,9 @@ main {
   background: #2ddf5c;
   padding: 0.5rem 1rem;
   z-index: 1;
-}
-
-.main-header > div {
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .toggle-button {
@@ -68,15 +66,16 @@ main {
   color: #0e4f1f;
   text-decoration: none;
   font-weight: bold;
-  height: 2.5rem;
-  /* width: 20px; */
-  display: inline-block;
-  vertical-align: middle;
+  height: 3rem;
+}
+
+.main-header > div {
+  display: flex;
+  align-items: center;
 }
 
 .main-header__brand img {
   height: 100%;
-  /* width: 100%; */
 }
 
 .main-nav {
@@ -87,11 +86,8 @@ main {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.main-nav__item {
-  display: inline-block;
-  margin: 0 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .main-nav__item a,
@@ -131,10 +127,7 @@ main {
   }
 
   .main-nav {
-    display: inline-block;
-    text-align: right;
-    width: calc(100% - 44px);
-    vertical-align: middle;
+    display: block;
   }
 }
 
@@ -148,12 +141,10 @@ main {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
-}
-
-.main-footer__link {
-  display: block;
-  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .main-footer__link a {
@@ -178,12 +169,14 @@ main {
 }
 
 .mobile-nav__items {
-  width: 90%;
   height: 100%;
   list-style: none;
-  margin: 10% auto;
+  margin: 0;
   padding: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .mobile-nav__item {
@@ -220,15 +213,15 @@ main {
   border: #a1a1a1;
   background: #ccc;
   color: #a1a1a1;
-} 
+}
 
 .open {
-    display: block !important;
+  display: block !important;
 }
 
 @media (min-width: 40rem) {
-  .main-footer__link {
-    display: inline-block;
-    margin: 0 1rem;
+  .main-footer__links {
+    flex-direction: row;
+    justify-content: center;
   }
 }
