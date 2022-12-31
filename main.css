@@ -9,24 +9,32 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 25% 1fr;
-  grid-template-rows: 80px auto 100px;
+  grid-template-rows: 4.5rem auto 4.5rem;
   text-align: center;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
 }
 
 header {
   background-color: aqua;
-  grid-column: 1 / -1;
+  /* grid-column: 1 / -1; */
+  grid-area: header;
 }
 
 footer {
   background-color: bisque;
-  grid-column: 1 / -1;
+  /* grid-column: 1 / -1; */
+  grid-area: footer;
 }
 
 .sidebar {
   background-color: aquamarine;
+  grid-area: sidebar;
 }
 
 main {
   background-color: azure;
+  grid-area: main;
 }
