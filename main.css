@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  grid-template-rows: 80px auto 100px;
+  text-align: center;
+}
+
+header {
+  background-color: aqua;
+  grid-column: 1 / -1;
+}
+
+footer {
+  background-color: bisque;
+  grid-column: 1 / -1;
+}
+
+.sidebar {
+  background-color: aquamarine;
+}
+
+main {
+  background-color: azure;
+}
